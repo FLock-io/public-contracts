@@ -1,0 +1,49 @@
+{
+  "name": "v1-core-hardhat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "node:start": "npx hardhat node",
+    "chain": "hardhat node --network hardhat --no-deploy",
+    "clean": "npx hardhat clean",
+    "compile": "hardhat compile",
+    "test": "npx hardhat test",
+    "deploy:local": "npx hardhat run scripts/deploy-local.ts",
+    "deploy:testnet": "npx hardhat run scripts/deploy-testnet.ts --network mumbai",
+    "deploy:claimRewards": "npx hardhat run scripts/deploy-claimRewards.ts --network mumbai",
+    "deploy:migrateTokens": "npx hardhat run scripts/deploy-migrateTokens.ts --network mumbai",
+    "deploy:FLockCredits": "npx hardhat run scripts/deploy-FLockCredits.ts --network mumbai",
+    "fund:migrateContract": "npx hardhat run scripts/fund-migrateContract.ts --network mumbai",
+    "fund:claimRewards": "npx hardhat run scripts/fund-claimRewards.ts --network mumbai",
+    "upgrade:testnet": "npx hardhat run scripts/upgrade-testnet.ts --network mumbai",
+    "deploy:scrollNFT": "npx hardhat run scripts/deploy-scrollNFT.ts --network scroll"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@chainlink/contracts": "^0.6.1",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.6.0",
+    "@openzeppelin/hardhat-upgrades": "^1.28.0",
+    "@types/chai": "^4.3.1",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.11.18",
+    "chai": "^4.3.6",
+    "erc721a": "^4.2.3",
+    "ethereum-waffle": "^4.0.9",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.6",
+    "hardhat-contract-sizer": "^2.10.0",
+    "hardhat-deploy": "^0.11.23",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "eth-crypto": "^2.6.0"
+  }
+}
